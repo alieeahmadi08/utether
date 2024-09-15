@@ -9,7 +9,8 @@ import Icon3Titles from '@/components/Libs/Icon3Titles';
 
 export default p => Component(p, Page);
 const Page: PageEl = (props, state, refresh, getProps) => {
-
+  
+  const con = document.getElementById('content');
   let styles = global.styles
 
 
@@ -18,32 +19,34 @@ const Page: PageEl = (props, state, refresh, getProps) => {
       <br-x />
       <Window title={" قیمت لحظه ای تتر (دلار)"} style={{ minHeight: 200, margin: 10, width: "calc(100% - 20px)" }}>
         
-        <div style={{width:"100%" , height:50 , backgroundColor:"#A8D6B8" , borderRadius:10, textAlign:"center"
+        <div style={{width:"100%" , height:50 , backgroundColor:"#99CCCC" , borderRadius:10, textAlign:"center" 
         }}>
           <br/>
           price: {props.p.price as number}
         </div>
 
-        <div style={{width:"100%" , height:50 , backgroundColor:"#A8D6B8" , borderRadius:10, textAlign:"center"
+        {/* <div style={{ backgroundImage: "url(https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg?w=940&webp=1)"}} ></div> */}
+
+        <div style={{width:"100%" , height:50 , backgroundColor:"#66CCCC" , borderRadius:10, textAlign:"center"
         }}>
           <br/>
           تغییرات ۲۴ ساعت: % {(Number(props.p.diff24d) as number).toLocaleString("fa-IR")}
         </div>
         
-        <div style={{width:"100%" , height:50 , backgroundColor:"#A8D6B8" , borderRadius:10, textAlign:"center"
+        <div style={{width:"100%" , height:50 , backgroundColor:"#99CCCC" , borderRadius:10, textAlign:"center"
         }}>
           <br/>
           تغییرات هفتگی: % {(Number(props.p.diff7d) as number).toLocaleString("fa-IR")}
         </div>
 
-        <div style={{width:"100%" , height:50 , backgroundColor:"#A8D6B8" , borderRadius:10, textAlign:"center"
+        <div style={{width:"100%" , height:50 , backgroundColor:"#66CCCC" , borderRadius:10, textAlign:"center"
         }}>
           <br/>
-          تغییرات ماهانه: {(Number(props.p.diff30d) as number).toLocaleString("fa-IR")}
+          تغییرات ماهانه: % {(Number(props.p.diff30d) as number).toLocaleString("fa-IR")}
         </div>
 
         <center>
-          تهیه شده توسط تیم پژوهشی
+          تهیه شده توسط تیم پژوهشی 127
         </center>
         
       </Window>
